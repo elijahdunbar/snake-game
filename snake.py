@@ -5,6 +5,7 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
+HELL = (666, 666)
 
 class Snake:
 
@@ -27,7 +28,7 @@ class Snake:
 
     def reset(self):
         for segment in self.segments:
-            segment.ht()
+            segment.goto(HELL)
         self.segments.clear()
         self.make_snake()
         self.head = self.segments[0]
